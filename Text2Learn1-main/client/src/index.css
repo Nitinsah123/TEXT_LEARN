@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0d1117;
+    --foreground: #e6edf3;
+    --card: #1c2128;
+    --card-foreground: #e6edf3;
+    --popover: #1c2128;
+    --popover-foreground: #e6edf3;
+    --primary: #3b82f6;
+    --primary-foreground: #0d1117;
+    --secondary: #7c3aed;
+    --secondary-foreground: #e6edf3;
+    --muted: #21262d;
+    --muted-foreground: #8b949e;
+    --accent: #3b82f6;
+    --accent-foreground: #0d1117;
+    --destructive: #8b0a0a;
+    --destructive-foreground: #e6edf3;
+    --border: #30363d;
+    --input: #21262d;
+    --ring: #3b82f6;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-[#0d1117] text-[#e6edf3] font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  p, span, div {
+    color: #e6edf3;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#3b82f6] hover:bg-[#2563eb] text-white font-medium px-5 py-2.5 rounded-lg transition-all shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#2a2f38] hover:bg-[#353943] text-gray-200 font-medium px-5 py-2.5 rounded-lg transition-all border border-gray-700;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-[#21262d] border border-[#30363d] rounded-lg text-[#e6edf3] placeholder-gray-500 focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent outline-none transition-all;
+  }
+  
+  .card {
+    @apply bg-[#1a1f26] rounded-xl shadow-lg border border-gray-800 p-6 backdrop-blur-sm;
+  }
+}
+
+/* Code block syntax highlighting */
+pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+/* Custom scrollbar - Dark Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#161b22];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#30363d] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#484f58];
+}
